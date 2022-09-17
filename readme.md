@@ -9,7 +9,7 @@ eng:  errors in special characters have been fixed
 #
 ## Usage/Kullanımı
 
-Install the **password-locking** package with [NPM](https://www.npmjs.org/):
+Install the **password-locking** package with [NPM](https://www.npmjs.com/package/password-locking):
 
 ```sh
 npm i password-locking 
