@@ -1,6 +1,6 @@
 # Password locking
 
-## 1.1.3-V Güncellemeler/updates
+## 1.1.5-V Güncellemeler/updates
 ```sh
 tr:  Özel karakterde verilen hatalar düzeltildi
 
@@ -51,10 +51,12 @@ console.log(tokenresult);
 ```
 
 # 
-## Discord
+## Discord / [Github](https://github.com/shadow61x/Password-locking)
+
 ```sh
 Name: Medulla#7014 
 ID: 401706174778572800
+
 
 tr: Discord hesabından özelime hataları yada isteklerinizi iletebilirsiniz
 
