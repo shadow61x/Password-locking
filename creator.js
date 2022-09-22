@@ -1,14 +1,17 @@
 const lang = require("./lang.json");
 const package = require("./package.json");
 
+const nowpckg = "1.1.5";
+
 function rn(len) {
-  var character = "!'^+%&/()=?_-><|+-*/,}{[]";
+  var character = "!'^+%&/()=?_->`$:.~#^<|+-*/,}{[]";
   var randomPsw = '';
   for (var i=0; i < len; i++) {
     var numPws = Math.floor(Math.random() * character.length);
     randomPsw += character.substring(numPws,numPws+1);
   }
-  if(randomPsw == lang.lang.a || randomPsw == lang.lang.A ||randomPsw == lang.lang.b || randomPsw == lang.lang.B 
+  if(randomPsw == lang.lang.a 
+  || randomPsw == lang.lang.A || randomPsw == lang.lang.b || randomPsw == lang.lang.B 
   || randomPsw == lang.lang.c || randomPsw == lang.lang.C || randomPsw == lang.lang.d 
   || randomPsw == lang.lang.D || randomPsw == lang.lang.e || randomPsw == lang.lang.E
   || randomPsw == lang.lang.f || randomPsw == lang.lang.F || randomPsw == lang.lang.g
@@ -358,7 +361,7 @@ function convert(mcharacter) {
           characterresult += rndm + ":;+" + rndm2
         }
       }
-      if(package.version != "1.1.4"){
+      if(package.version != nowpckg){
         console.log("!!Password-Locking Güncelleme gerekli / Password-Locking Update required  : npm i password-locking")
         return characterresult;
       }else{
@@ -675,7 +678,7 @@ function convert(mcharacter) {
           characterresult += `"`
         }
         }
-        if(package.version != "1.1.4"){
+        if(package.version != nowpckg){
           console.log("!!Password-Locking Güncelleme gerekli / Password-Locking Update required  : npm i password-locking")
           return characterresult;
         }else{
