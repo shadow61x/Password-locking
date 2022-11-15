@@ -1,13 +1,13 @@
 # Password locking
 
-## 1.1.5-V Güncellemeler/updates
+## 1.2.0-V updates
 ```sh
 tr:  Özel karakterde verilen hatalar düzeltildi
 
 eng:  errors in special characters have been fixed
 ```
 #
-## Usage/Kullanımı
+## Usage
 
 Install the **password-locking** package with [NPM](https://www.npmjs.com/package/password-locking):
 
@@ -15,15 +15,16 @@ Install the **password-locking** package with [NPM](https://www.npmjs.com/packag
 npm i password-locking 
 ```
 
-Sunucuya paketi bağlayın <br>
+
 Connect package to server
+ <br>
 ```js
 const lang = require("password-locking");
 ```
 
-<b>Şifreleme/Encryption<b>
+<b>Encryption<b>
 ```js
-const password = lang.convert("PASSWORD-123456789");
+const password = lang.convert("PaSsWoRd 123456789 (-_-)  (^-^)");
 //tr: metni anlamsız ifadeler ile şifreleyip gönderir
 //eng: encrypts and sends text with meaningless expressions
 ```
@@ -31,22 +32,22 @@ const password = lang.convert("PASSWORD-123456789");
 <br>
 <b style="color:#f43521;">!! In version 1.1.3, statements like (" ! ' ^+ * -/ ...") may work incorrectly.</b>
 <br><br>
-<b>Çeviri/Translation<b>
+<b>Translation<b>
 ```js
 const tokenresult = lang.translation(password);
 //tr: şifrelenmiş metni çevirip gönderir
 //eng: translates and sends encrypted text
 ```
-## Örnek/Example
+## Example
 ```js
 const lang = require("password-locking");
 
-const token = lang.convert("my-password-123");
-const tokenresult = lang.translation(token);
+const password = lang.convert("PaSsWoRd 123456789 (-_-)  (^-^)");
+const fws = lang.translation(password);
 
-
-console.log(token);
-console.log(tokenresult);
+console.log(password);//encrypted text
+console.log('\r')//It has nothing to do with the package.
+console.log(fws);//decrypted text
 
 ```
 

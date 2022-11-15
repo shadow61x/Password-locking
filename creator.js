@@ -1,7 +1,8 @@
 const lang = require("./lang.json");
 const package = require("./package.json");
+const fs = require('fs');
 
-const nowpckg = "1.1.5";
+const nowpckg = "1.1.6";
 
 function rn(len) {
   var character = "!'^+%&/()=?_->`$:.~#^<|+-*/,}{[]";
@@ -43,7 +44,7 @@ function rn(len) {
   || randomPsw == lang.lang["|"] || randomPsw == lang.lang["_"] || randomPsw == lang.lang["_-"]
   || randomPsw == lang.lang["&"] || randomPsw == lang.lang["$"] || randomPsw == lang.lang["<"]
   || randomPsw == lang.lang[">"] || randomPsw == lang.lang["*"] || randomPsw == lang.lang[","]
-  || randomPsw == lang.lang[":"])
+  || randomPsw == lang.lang[":"] || randomPsw == lang.lang["."])
   {
   return "+/%";
   }
@@ -57,9 +58,13 @@ function convert(mcharacter) {
     var characterresult = '';
 
     for (var i=0; i < characterlength; i++) {
-        let result = character.substring(characterlength-characterlength+i,characterlength-characterlength+i+1);
+
+        let firsresult = character.substring(characterlength-characterlength+i,characterlength-characterlength+i+1);
+        let result = firsresult.replace(" ","-")
         const rndm = rn(3);
-        const rndm2 = rn(3);
+        const rndm2 = rn(3); 
+
+
         for(var s=result; s == "a"; s =+ "é"){
           characterresult += rndm + lang.lang.a + rndm2
         }
@@ -357,6 +362,9 @@ function convert(mcharacter) {
         for(var s=result; s == ":"; s =+ "é"){
           characterresult += rndm + lang.lang[":"] + rndm2
         }
+        for(var s=result; s == "."; s =+ "é"){
+          characterresult += rndm + lang.lang["."] + rndm2
+        }
         for(var s=result; s == `"`; s =+ "é"){
           characterresult += rndm + ":;+" + rndm2
         }
@@ -373,7 +381,7 @@ function convert(mcharacter) {
       var character = mcharacter;
       var characterlength = character.length;
       var characterresult = '';
-  
+      
       for (let i=0; i < characterlength; i++) {
         let result = character.substring(i,i+3);
         i = i+2
@@ -570,7 +578,7 @@ function convert(mcharacter) {
           characterresult += "w"
         }
         for(var s=result; s == "---"; s =+ "é"){
-          characterresult += "-"
+          characterresult += " "
         }
         for(var s=result; s == "!-+"; s =+ "é"){
           characterresult += "0"
@@ -650,9 +658,6 @@ function convert(mcharacter) {
         for(var s=result; s == "$;+"; s =+ "é"){
           characterresult += "_"
         }
-        for(var s=result; s == "~;<"; s =+ "é"){
-          characterresult += "-"
-        }
         for(var s=result; s == "-_;"; s =+ "é"){
           characterresult += "&"
         }
@@ -674,6 +679,12 @@ function convert(mcharacter) {
         for(var s=result; s == "~;>"; s =+ "é"){
           characterresult += "|"
         }
+        for(var s=result; s == "#½$"; s =+ "é"){
+          characterresult += ":"
+        }
+        for(var s=result; s == "#~*"; s =+ "é"){
+          characterresult += "."
+        }
         for(var s=result; s == ":;+"; s =+ "é"){
           characterresult += `"`
         }
@@ -686,7 +697,14 @@ function convert(mcharacter) {
         }
       }
 
+      async function mylang(fileurl) {
+        const data = fs.readFileSync(`./${fileurl}`).toString();
+        const data2 = JSON.parse(data);
+        console.log(data2.name);
+      }
+
     module.exports = {
         convert,
-        translation
+        translation,
+        mylang
     }
