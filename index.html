@@ -1,1 +1,63 @@
-<h2>coming soon</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Password-Locking</title>
+</head>
+<body>
+<center>
+    <h1>Password-Locking</h1>
+    <b> An enhanced package to encrypt your data <br> <a href="#usage">How to use</a> </b>
+<br><br><br><br>
+<div class="codeblog">
+<div class="brcodebx"></div>
+
+
+    <div class="codebx" id="usage">
+        <p>To install the package</p><b>npm i password-locking </b>
+        <br>
+        <p>Package usage <br><b>const lang = require("password-locking");</b></p>
+        </div>
+        <br></div><br><br>
+        <div class="codebx" id="usage">
+            <h2>Encryption</h2>
+            <p>Defined <b>Password 123456789 (-_-)(^-^)</b>&nbsp;Encrypts text with nonsense characters</p>
+            <code>
+                <const>const</const>&nbsp;<password>password</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>convert</gtvl><prt>(</prt><string>"Password 123456789 (-_-) (^-^)"</string><prt>)</prt>
+            </code>
+            <br><br>
+        </div>
+         <div class="codebx" id="usage">
+            <h2>Decoding</h2>
+            <p>The <b>password</b> we use in the encryption code is encrypted data, we use the translation function for clarity.</p>
+            <p>Instead of <b>password</b> data, you can write and decrypt encrypted stored data.</p>
+            <code>
+                <const>const</const>&nbsp;<password>tokenresult</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>translation</gtvl><prt>(</prt><value>password</value><prt>)</prt>
+            </code>
+            <br><br>
+        </div><br><br>
+        <div class="codebx" id="usage">
+            <h2>Examples</h2>
+
+            <code>
+                <const>const</const>&nbsp;<password>lang</password>= <gtvl>require</gtvl><prt>(</prt><string>"password-locking"</string><prt>)</prt>;<br>
+                <const>const</const>&nbsp;<password>password</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>convert</gtvl><prt>(</prt><string>"password 123456789 (-_-)  (^-^)"</string><prt>)</prt>;<br>
+                <const>const</const>&nbsp;<password>decrypted_password</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>translation</gtvl><prt>(</prt><value>şifre</value><prt>)</prt>;
+                <br>
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>password</password><prt>)</prt>;<txt>//Encrypted data</txt>             
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>/r</password><prt>)</prt>;
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>decrypted_password</password><prt>)</prt>;<txt>//decrypted "password" ciphertext</txt>
+            </code>
+            <br><br>
+        </div>
+            <br><br>
+        </div>
+</center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>Password-Locking</title>
+</head>
+<body>
+<center>
+    <h1>Password-Locking</h1>
+    <b> Verilerinizi şifrelemek için geliştirilen bir paket <br> <a href="#usage">Nasıl kullanılır</a> </b>
+<br><br><br><br>
+<div class="codeblog">
+<div class="brcodebx"></div>
+
+
+    <div class="codebx" id="usage">
+        <p>Paketi yüklemek için</p><b>npm i password-locking </b>
+        <br>
+        <p>Paket kullanımı<br><b>const lang = require("password-locking");</b></p>
+        </div>
+        <br></div><br><br>
+        <div class="codebx" id="usage">
+            <h2>Şifreleme</h2>
+            <p>Tanımlanan <b>ŞiFre 123456789 (-_-)  (^-^)</b> Yazısını anlamsız karakterlerile şifreler</p>
+            <code>
+                <const>const</const>&nbsp;<password>password</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>convert</gtvl><prt>(</prt><string>"ŞiFre 123456789 (-_-)  (^-^)"</string><prt>)</prt>
+            </code>
+            <br><br>
+        </div>
+         <div class="codebx" id="usage">
+            <h2>Şifre çözme</h2>
+            <p>Şifreleme kodun da kullandığımız <b>password</b> gelen veri şifreli veridir bunu anlaşılır hale getirmek için <b>translation</b> fonksiyonunu kullanırız</p>
+            <p><b>password</b> verisi yerine şifreli kayıt edilmiş verileri yazıp deşifre edebilirsiniz</p>
+            <code>
+                <const>const</const>&nbsp;<password>tokenresult</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>translation</gtvl><prt>(</prt><value>password</value><prt>)</prt>
+            </code>
+            <br><br>
+        </div><br><br>
+        <div class="codebx" id="usage">
+            <h2>Örnek</h2>
+
+            <code>
+                <const>const</const>&nbsp;<password>lang</password>= <gtvl>require</gtvl><prt>(</prt><string>"password-locking"</string><prt>)</prt>;<br>
+                <const>const</const>&nbsp;<password>şifre</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>convert</gtvl><prt>(</prt><string>"ŞiFre 123456789 (-_-)  (^-^)"</string><prt>)</prt>;<br>
+                <const>const</const>&nbsp;<password>çözülmüş_şifre</password>&nbsp;<b>=</b>&nbsp;<value>lang</value>.<gtvl>translation</gtvl><prt>(</prt><value>şifre</value><prt>)</prt>;
+                <br>
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>şifre</password><prt>)</prt>;<txt>//Şifrelenmiş veri</txt>             
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>/r</password><prt>)</prt>;
+                <gtvl>console</gtvl>.<password>log</password><prt>(</prt><password>çözülmüş_şifre</password><prt>)</prt>;<txt>//"şifre" şifreli metini çözülmüş hali</txt>
+            </code>
+            <br><br>
+        </div>
+            <br><br>
+        </div>
+</center>
+
+
+
+</body>
+</html>
