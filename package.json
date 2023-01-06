@@ -1,11 +1,31 @@
 {
   "name": "password-locking",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "",
-  "main": "creator.js",
+  "exports": {
+    ".": {
+      "import": "./lib/procress/main.js",
+      "require": "./lib/procress/main.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "main":"./lib/procress/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "password-locking",
+    "locking",
+    "şifreleme"
+  ],
+  "homepage": "https://shadow61x.github.io/Password-locking/",
+  "bugs":"https://github.com/shadow61x/Password-locking/issues",
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/shadow61x/Password-locking.git"
+  },
+  "author": "Medulla",
   "license": "MIT"
 }
