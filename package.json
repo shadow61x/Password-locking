@@ -1,6 +1,6 @@
 {
   "name": "password-locking",
-  "version": "2.0.6",
+  "version": "2.2.3",
   "description": "",
   "exports": {
     ".": {
@@ -19,11 +19,12 @@
   "keywords": [
     "password-locking",
     "locking",
-    "şifreleme"
+    "şifreleme",
+    "security",
+    "protection"
   ],
   "bugs": "https://github.com/shadow61x/Password-locking/issues",
   "devDependencies": {
-    "brain.js": "^2.0.0-beta.18",
     "crypto": "^1.0.1"
   },
   "repository": {
@@ -32,8 +33,8 @@
   },
   "author": "Medulla",
   "license": "MIT",
+  "homepage": "https://codeline.gitbook.io/password-locking/",
   "dependencies": {
-    "brain.js": "^2.0.0-beta.18",
     "crypto": "^1.0.1"
   }
 }

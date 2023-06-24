@@ -1,12 +1,6 @@
 ># Password locking
 
-## <span style="color:red">attention</span>
-With the new update, the algorithm has completely changed. Encrypted texts prior to version 2.0.0 cannot be used in versions later than 2.0.0. Install password-locking@1.3.3 to use old version.
-```bash
-npm i password-locking@1.3.3
-```
-<br>
-<br>
+
 
 ## Setup
 ```bash
@@ -41,12 +35,24 @@ Thanks to the 'text' value, now you can perform both encryption and decryption w
 <br>
 <br>
 
+## Make your first hash
+Pl-128 is a secure and effective data encryption algorithm. With a 128-bit key size, it provides a high level of security and flawlessly protects your data. It is an ideal choice for both personal use
+```js
+const pl = require("password-locking");
+
+let encs = encryption.pl_128("Merhaba Dünya (Hello World)")
+console.log(encs);
+
+//output : ATAeHQ9RcAUlDBFjKBROcCtfBREDAH93CB5iDwJfADI=
+```
 
 <br>
 
-Bugs, suggestions, questions about the package... you can write by <br>sending a private message on discord.
-```sh
-#Discord >
-Name: Medulla#7014 
-ID: 401706174778572800
+
+```md
+#Discord community
+https://discord.gg/xvZUMyaAU2
+
+#Github
+https://github.com/shadow61x/Password-locking
 ```
